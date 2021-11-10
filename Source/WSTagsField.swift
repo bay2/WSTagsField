@@ -89,7 +89,7 @@ open class WSTagsField: UIScrollView {
 
     @IBInspectable open var cornerRadius: CGFloat = 3.0 {
         didSet {
-            tagViews.forEach { $0.cornerRadius = self.cornerRadius }
+            tagViews.forEach { $0.tagCornerRadius = self.cornerRadius }
         }
     }
 
@@ -338,7 +338,7 @@ open class WSTagsField: UIScrollView {
     
     /// Set corner radius of tag views
     open func setCornerRadius(to cornerRadius: CGFloat) {
-        tagViews.forEach { $0.cornerRadius = cornerRadius }
+        tagViews.forEach { $0.tagCornerRadius = cornerRadius }
     }
     
     /// Take the text inside of the field and make it a Tag.
@@ -398,7 +398,7 @@ open class WSTagsField: UIScrollView {
         tagView.selectedColor = self.selectedColor
         tagView.selectedTextColor = self.selectedTextColor
         tagView.displayDelimiter = self.isDelimiterVisible ? self.delimiter : ""
-        tagView.cornerRadius = self.cornerRadius
+        tagView.tagCornerRadius = self.cornerRadius
         tagView.borderWidth = self.borderWidth
         tagView.borderColor = self.borderColor
         tagView.keyboardAppearance = self.keyboardAppearance
