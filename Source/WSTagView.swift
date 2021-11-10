@@ -33,9 +33,9 @@ open class WSTagView: UIView, UITextInputTraits {
         }
     }
 
-    open var tagCornerRadius: CGFloat = 3.0 {
+    open var cornerRadius: CGFloat = 3.0 {
         didSet {
-            self.layer.cornerRadius = tagCornerRadius
+            self.layer.cornerRadius = cornerRadius
             setNeedsDisplay()
         }
     }
@@ -105,7 +105,7 @@ open class WSTagView: UIView, UITextInputTraits {
     public init(tag: WSTag) {
         super.init(frame: CGRect.zero)
         self.backgroundColor = tintColor
-        self.layer.cornerRadius = tagCornerRadius
+        self.layer.cornerRadius = cornerRadius
         self.layer.masksToBounds = true
 
         textColor = .white
